@@ -9,7 +9,10 @@ public class testBST
         bst.add(51);
         bst.add(32);
         bst.add(75);
+        bst.add(5);
+        bst.add(38);
+        bst.add(89);
         int size = bst.getSize();
-        Assert.assertEquals(3,size);
+        Assert.assertEquals(6,size);
     }
 }
