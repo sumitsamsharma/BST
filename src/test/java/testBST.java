@@ -5,14 +5,27 @@ public class testBST
 {
     @Test
     public void givenNodes_shouldReturnBST() {
-        BinarySearchTree bst = new BinarySearchTree();
-        bst.add(51);
-        bst.add(32);
-        bst.add(75);
-        bst.add(5);
-        bst.add(38);
-        bst.add(89);
-        int size = bst.getSize();
+        BinarySearchTree bTree = new BinarySearchTree();
+        bTree.add(51);
+        bTree.add(32);
+        bTree.add(75);
+        bTree.add(5);
+        bTree.add(38);
+        bTree.add(89);
+        int size = bTree.getSize();
         Assert.assertEquals(6,size);
+    }
+
+    @Test
+    public void given_BST_searchReturns()
+    {
+        BinarySearchTree bTree= new BinarySearchTree();
+        bTree.add(51);
+        bTree.add(32);
+        bTree.add(75);
+        bTree.add(5);
+        bTree.add(38);
+        bTree.add(89);
+        Assert.assertTrue(bTree.searchKey(5));
     }
 }

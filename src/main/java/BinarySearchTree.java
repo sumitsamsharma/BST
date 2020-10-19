@@ -42,4 +42,28 @@ public class BinarySearchTree<K extends Comparable> {
         return current == null ? 0 : 1 + size(current.left) + size(current.right);
     }
 
+    public boolean searchKey(K key) {
+        return searchRec(root,key);
+    }
+
+    private boolean searchRec(bNode curr, K key) {
+        boolean present;
+        if(key.compareTo(curr.key)==0){
+            present= true;
+        }
+        else if(key.compareTo(curr.key)>0){
+            if(curr.right==null)
+                present= false;
+            else
+                present=searchRec(curr.right, key);
+        }
+        else{
+            if(curr.left==null)
+                present= false;
+            else
+                present=searchRec(curr.left, key);
+        }
+        return present;
+    }
 }
+
